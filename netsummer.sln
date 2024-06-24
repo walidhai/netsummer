@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "src\ConsoleA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "test\TestProject1\TestProject1.csproj", "{77CE25ED-6C04-4453-9323-8E4875CBAB72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject2", "test\TestProject2\TestProject2.csproj", "{6D19F6EB-7E75-4921-BF41-FC95C62155F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE} = {3DC469EB-BCF2-4308-ADB6-262EF9314D08}
 		{77CE25ED-6C04-4453-9323-8E4875CBAB72} = {0241654A-ABB9-49F2-8B47-BB00EA324F33}
+		{6D19F6EB-7E75-4921-BF41-FC95C62155F1} = {0241654A-ABB9-49F2-8B47-BB00EA324F33}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +29,9 @@ Global
 		{77CE25ED-6C04-4453-9323-8E4875CBAB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77CE25ED-6C04-4453-9323-8E4875CBAB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77CE25ED-6C04-4453-9323-8E4875CBAB72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D19F6EB-7E75-4921-BF41-FC95C62155F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D19F6EB-7E75-4921-BF41-FC95C62155F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D19F6EB-7E75-4921-BF41-FC95C62155F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D19F6EB-7E75-4921-BF41-FC95C62155F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
