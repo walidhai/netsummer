@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3DC469EB-BCF2-4308-ADB6-262EF9314D08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0241654A-ABB9-49F2-8B47-BB00EA324F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "src\ConsoleApp1\ConsoleApp1.csproj", "{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE} = {3DC469EB-BCF2-4308-ADB6-262EF9314D08}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE11C8C-CD0D-45FD-8D4A-FC0F5D576BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
