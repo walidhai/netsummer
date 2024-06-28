@@ -10,4 +10,5 @@ public class Product
     public int Price { get; set; }
     public DateTime Created => DateTime.Now;
     public Category Category{ get; set; }
+    public string CategoryID { get; set; }
 }
