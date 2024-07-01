@@ -1,4 +1,4 @@
-namespace TestProject1;
+namespace ShopWebApp.Tests;
 
 public class UnitTest1
 {
