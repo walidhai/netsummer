@@ -7,7 +7,7 @@ public class Category
 {
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [Key]
-    public string CategoryID { get; set; }
+    public int CategoryID { get; set; }
     
     public string CategoryName { get; set; }
     

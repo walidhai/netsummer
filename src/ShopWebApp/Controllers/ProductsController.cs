@@ -48,7 +48,8 @@ namespace ShopWebApp.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "CategoryID");
+            var categories = _context.Categories.ToList();
+            ViewData["CategoryName"] = new SelectList(categories, "CategoryName", "CategoryName");
             return View();
         }
 
@@ -57,15 +58,24 @@ namespace ShopWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductID,ProductName,Price,CategoryID")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductID,ProductName,Price,Category")] Product product)
         {
+            
             if (ModelState.IsValid)
             {
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "CategoryID", product.CategoryID);
+            ViewData["CategoryName"] = new SelectList(_context.Categories, "CategoryName", "CategoryName", product.Category);
+            IEnumerable<string> errorMessages = ModelState.Values
+                .SelectMany(v => v.Errors)
+                .Select(e => e.ErrorMessage).ToList();
+            foreach (var errorMessage in errorMessages)
+            {
+                Console.WriteLine($"Error in model : {errorMessage}");
+            }
+            Console.WriteLine($"Error posting product. Reason: Modelstate:{ModelState.Values}");
             return View(product);
         }
 
@@ -82,7 +92,7 @@ namespace ShopWebApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "CategoryID", product.CategoryID);
+            ViewData["Category"] = new SelectList(_context.Categories, "Category", "Category", product.Category);
             return View(product);
         }
 
@@ -91,7 +101,7 @@ namespace ShopWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ProductID,ProductName,Price,CategoryID")] Product product)
+        public async Task<IActionResult> Edit(string id, [Bind("ProductID,ProductName,Price,Category")] Product product)
         {
             if (id != product.ProductID)
             {
@@ -118,7 +128,7 @@ namespace ShopWebApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "CategoryID", "CategoryID", product.CategoryID);
+            ViewData["Category"] = new SelectList(_context.Categories, "Category", "Category", product.Category);
             return View(product);
         }
 

@@ -12,8 +12,8 @@ public class DbInitializer
             return;
         var categories = new Category[]
         {
-            new Category{CategoryID = "01", CategoryName = "Electronics"},
-            new Category{CategoryID = "02", CategoryName = "Books"}
+            new Category{CategoryID = 1, CategoryName = "Electronics"},
+            new Category{CategoryID = 2, CategoryName = "Books"}
         };
         foreach (var category in categories)
         {
@@ -23,9 +23,9 @@ public class DbInitializer
         context.SaveChanges();
         var products = new Product[]
         {
-            new Product { ProductID = "1", ProductName = "Pc", Price = 1000, CategoryID = "01"},
-            new Product { ProductID = "2", ProductName = "Phone", Price = 500, CategoryID = "01"},
-            new Product { ProductID = "3", ProductName = "Net for dummies", Price = 200, CategoryID = "02"}
+            new Product { ProductID = "1", ProductName = "Pc", Price = 1000, Category = categories[0]},
+            new Product { ProductID = "2", ProductName = "Phone", Price = 500, Category = categories[0]},
+            new Product { ProductID = "3", ProductName = "Net for dummies", Price = 200, Category = categories[1]}
         };
         foreach (var product in products)
         {
